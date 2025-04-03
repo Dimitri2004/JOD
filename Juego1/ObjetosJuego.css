@@ -10,11 +10,17 @@
 }
 #contenedor{
     position: absolute; /* Posición relativa al viewport */
-            width: 1800px; /* Ancho del contenedor */
-            height: 750px; /* Altura del contenedor */
-            border: solid 1px;
+            width: 1500px; /* Ancho del contenedor */
+            height: 520px; /* Altura del contenedor */
+            border: solid 5px;
             left: 50%; /* Posicionamiento horizontal */
             top: 50%; /* Posicionamiento vertical */
             transform: translate(-50%, -50%); /* Ajuste para centrar */
+            background-color: beige;
 }
 
+
+
+#pantalla{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/011/153/437/non_2x/pixel-desert-landscape-8-bit-game-level-background-vector.jpg);
+}
