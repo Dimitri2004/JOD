@@ -1,12 +1,20 @@
 
 
 #miObjeto {
-    position: absolute; /* Necesario para poder cambiar la posición */
-    left: 20px; /* Posición inicial */
-    top: 30px; /* Altura inicial */
-    width: 50px; /* Tamaño del objeto */
-    height: 50px;
-    background-color: blue; /* Color del objeto */
+    position: absolute;
+    left: 49%; /* Posición inicial */
+    top: 95%; /* Posición fija vertical */
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
+#miObjetivo {
+    position: absolute;
+    left: 51%; /* Posición inicial */
+    top: 95%; /* Posición fija vertical */
+    width: 20px;
+    height: 20px;
+    background-color: blue;
 }
 #contenedor{
     position: absolute; /* Posición relativa al viewport */
@@ -17,4 +25,3 @@
             top: 50%; /* Posicionamiento vertical */
             transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
-
