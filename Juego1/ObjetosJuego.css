@@ -1,0 +1,19 @@
+
+
+#miObjeto {
+    position: absolute; /* Necesario para poder cambiar la posición */
+    left: 20px; /* Posición inicial */
+    top: 30px; /* Altura inicial */
+    width: 50px; /* Tamaño del objeto */
+    height: 50px;
+    background-color: blue; /* Color del objeto */
+}
+#contenedor{
+    position: absolute; /* Posición relativa al viewport */
+            width: 1800px; /* Ancho del contenedor */
+            height: 750px; /* Altura del contenedor */
+            border: solid 1px;
+            left: 50%; /* Posicionamiento horizontal */
+            top: 50%; /* Posicionamiento vertical */
+            transform: translate(-50%, -50%); /* Ajuste para centrar */
+}
