@@ -66,11 +66,12 @@ const temporizador = document.querySelector("#tiempo")
     let intervaloB
     // creamos la variable que marque el tiempo
     let tiempoRestante = 3
+    let fin =false
 
     //funcion que ira reduciendo el tiempo
     function bajarTiempo(){
         tiempoRestante--
-        if(tiempoRestante>-1){
+        if(tiempoRestante>-1 && fin==false){
             temporizador.innerHTML = tiempoRestante
         }else{
             clearInterval(intervaloB)
@@ -79,7 +80,13 @@ const temporizador = document.querySelector("#tiempo")
     }
 
     // Llamamos a la funcion para 'bajarTiempo' cada segundo
-    intervaloB = setInterval(bajarTiempo,1000); 
+    intervaloB = setInterval(bajarTiempo,1000);
+const paracion = document.querySelector("#Parar")
+    paracion.addEventListener("click",paraTiempo)
+
+    function paraTiempo(){
+       fin = true
+    }
 
 
 
