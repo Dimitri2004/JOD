@@ -2,26 +2,48 @@
 
 #miObjeto {
     position: absolute;
-    left: 49%; /* Posición inicial */
-    top: 95%; /* Posición fija vertical */
-    width: 20px;
-    height: 20px;
-    background-color: blue;
+    left: 40%;
+    top: 76.3%; /* Posición fija vertical */
+    width: 90px;
+    height: 190px;
+    background-color: aqua;
+
 }
+#bala1{
+    left: 40%;
+    top: 76.3%; /* Posición fija vertical */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 21);
+}
+
 #miObjetivo {
     position: absolute;
-    left: 51%; /* Posición inicial */
-    top: 95%; /* Posición fija vertical */
-    width: 20px;
-    height: 20px;
-    background-color: blue;
+   left: 40%;
+    top: 76.3%; /* Posición fija vertical */
+    width: 90px;
+    height: 190px;
+    background-color: aqua;
+
 }
+#bala2 {
+    
+   left: 40%;
+    top: 76.3%; /* Posición fija vertical */
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 0, 0);
+
+}
+
+
 #contenedor{
     position: absolute; /* Posición relativa al viewport */
             width: 1800px; /* Ancho del contenedor */
-            height: 750px; /* Altura del contenedor */
+            height: 800px; /* Altura del contenedor */
             border: solid 1px;
             left: 50%; /* Posicionamiento horizontal */
-            top: 50%; /* Posicionamiento vertical */
+            top: 50%;
+            
             transform: translate(-50%, -50%); /* Ajuste para centrar */
 }
