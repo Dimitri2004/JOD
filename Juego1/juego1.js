@@ -49,7 +49,7 @@ function moverObjetivo() {
 setInterval(moverObjetivo, 20);
 
 
-const bala1 =document.getElementById("bala1")
+const bala1 =document.getElementById("bala1");
 
 
 
