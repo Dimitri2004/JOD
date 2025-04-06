@@ -67,7 +67,7 @@ function disparoBala1(){
 }
 setInterval(disparoBala1,10);
 
-const bala2 =document.getElementById("bala2")
+const bala2 =document.getElementById("bala2");
 
 let posicionb2=440;
 let velocidadb2=addEventListener("click",20);
