@@ -60,33 +60,32 @@ const distancia2 =395;
         // Llamamos a la función `moverObjeto` repetidamente
         setInterval(moverObjetivo, 20);
 
+
+
 // localizamos el objeto que usaremos para mostrar el tiempo
 const temporizador = document.querySelector("#tiempo")
     // Creamos una variable que llamara a la funcion 'bajarTiempo'    
     let intervaloB
     // creamos la variable que marque el tiempo
     let tiempoRestante = 3
-    let fin =false
 
-    //funcion que ira reduciendo el tiempo
+    encenderTemporizador();
+    //funcion que ira reduciendo el tiempo y actuara de temporizador
     function bajarTiempo(){
+        temporizador.innerHTML = tiempoRestante
         tiempoRestante--
-        if(tiempoRestante>-1 && fin==false){
-            temporizador.innerHTML = tiempoRestante
-        }else{
+        if(tiempoRestante<0){
             clearInterval(intervaloB)
-            temporizador.innerHTML = "se acabo el tiempo"
+            temporizador.innerHTML = "YA"
         }
     }
 
-    // Llamamos a la funcion para 'bajarTiempo' cada segundo
-    intervaloB = setInterval(bajarTiempo,1000);
-const paracion = document.querySelector("#Parar")
-    paracion.addEventListener("click",paraTiempo)
-
-    function paraTiempo(){
-       fin = true
+    // Funcion para encender el temporizador con 3 segundos
+    function encenderTemporizador(){
+        tiempoRestante = 3;
+        intervaloB = setInterval(bajarTiempo,1000);
     }
+
 
 
 
