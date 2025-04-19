@@ -52,10 +52,10 @@ const temporizador = document.querySelector("#tiempo")
                       if (yaPresiono) return;
 
                       if (event.key === "r" || event.key === "R") {
-                        resultado2.textContent = "¡Jugador 1 fue el más rápido! 🚀";
+                        decidirGanador()
                         yaPresiono = true;
                       } else if (event.key === "l" || event.key === "L") {
-                        resultado.textContent = "¡Jugador 2 fue el más rápido! ⚡";
+                        decidirGanador()
                         yaPresiono = true;
                       }
                     });
