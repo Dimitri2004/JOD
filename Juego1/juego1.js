@@ -47,8 +47,7 @@ function moverObjetivo() {
     }
 
 }
-// Llamamos a la función `moverObjeto` repetidamente
-setInterval(moverObjetivo, 20);
+
 
 
 
