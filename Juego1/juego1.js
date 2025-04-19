@@ -58,8 +58,7 @@ const temporizador = document.querySelector("#tiempo")
         if(tiempoRestante>0){
             quitarVidaInicioPlayer1()
         }else{
-         document.getElementById("vida4").style.display = "none";
-         //vidaPlayer1=0
+         quitarVidaInicioPlayer2
          decidirGanador()
          yaPresiono = true;
         }
@@ -69,8 +68,7 @@ const temporizador = document.querySelector("#tiempo")
             quitarVidaInicioPlayer2()
 
       }else{
-        document.getElementById("vida1").style.display = "none";
-        //vidaPlayer2=0
+        quitarVidaInicioPlayer1
         decidirGanador()
         yaPresiono = true;
         }
@@ -142,6 +140,7 @@ function resetRonda(){
     
     objeto.style.left = posicionx1 + "px";
     objeto2.style.left = posicionx2 + "px";
+    yaPresiono=false
 
     temporizador.innerHTML=""
     encenderTemporizador()
