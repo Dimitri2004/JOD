@@ -6,6 +6,8 @@ let velocidadx1 = 3;
  let velocidadx2 =5;
 let distancia1=150;
 let distancia2=950;
+let vidaPlayer1 = 3;
+let vidaPlayer2 = 3;
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
