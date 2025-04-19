@@ -68,25 +68,18 @@ const temporizador = document.querySelector("#tiempo")
         intervaloB = setInterval(bajarTiempo,1000);
     }
 
+//funcion que decide quien gana
+function decidirGanador(){
+    if (vidasJugador1 == 0){
+        victoria(1)
+    }
+    else if(vidasJugador2==0){
+        victoria(2)
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//funcion que declara la victoria
+function victoria(ganador){
+    alert("Gana el jugador "+ ganador)
+}
 
