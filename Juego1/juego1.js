@@ -91,10 +91,10 @@ function decidirGanador(){
         victoria("empate")
     }
     else if (vidaPlayer1 == 0){
-        victoria(1)
+        victoria(2)
     }
     else if(vidaPlayer2==0){
-        victoria(2)
+        victoria(1)
     }
     else {
         resetRonda()
