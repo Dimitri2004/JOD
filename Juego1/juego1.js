@@ -53,15 +53,14 @@ const temporizador = document.querySelector("#tiempo")
 
     document.addEventListener("keydown", (event) => {
       if (yaPresiono) return;
+      yaPresiono = true;
+
 
       if (event.key === "r" || event.key === "R") {
         if(tiempoRestante>0){
             quitarVidaInicioPlayer1()
         }else{
-         document.getElementById("vida4").style.display = "none";
-         //vidaPlayer1=0
-         decidirGanador()
-         yaPresiono = true;
+         quitarVidaInicioPlayer2()
         }
 
       } else if (event.key === "l" || event.key === "L") {
@@ -69,12 +68,10 @@ const temporizador = document.querySelector("#tiempo")
             quitarVidaInicioPlayer2()
 
       }else{
-        document.getElementById("vida1").style.display = "none";
-        //vidaPlayer2=0
-        decidirGanador()
-        yaPresiono = true;
+        quitarVidaInicioPlayer1()
         }
       }
+      decidirGanador()
     });
 
     // Funcion para encender el temporizador con 3 segundos
@@ -96,9 +93,7 @@ function decidirGanador(){
     else if(vidaPlayer2==0){
         victoria(1)
     }
-    else {
-        resetRonda()
-    }
+    
 }
 
 //funcion que declara la victoria
@@ -142,6 +137,7 @@ function resetRonda(){
     
     objeto.style.left = posicionx1 + "px";
     objeto2.style.left = posicionx2 + "px";
+    yaPresiono=false
 
     temporizador.innerHTML=""
     encenderTemporizador()
