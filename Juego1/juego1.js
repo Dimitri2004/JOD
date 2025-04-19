@@ -3,7 +3,7 @@ const objeto2 = document.getElementById("Player2");
 let posicionx1 = 450;
  let posicionx2 =450;
 let velocidadx1 = 3;
- let velocidadx2 =3;
+ let velocidadx2 =5;
 let distancia1=150;
 let distancia2=950;
 function moverObjeto() {
