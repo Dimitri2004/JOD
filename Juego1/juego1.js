@@ -56,7 +56,7 @@ const temporizador = document.querySelector("#tiempo")
                             quitarVidaInicioPlayer1()
                         }else{
                          document.getElementById("vida4").style.display = "none";
-                         vidaPlayer1=0
+                         //vidaPlayer1=0
                          decidirGanador()
                          yaPresiono = true;
                         }
@@ -67,7 +67,7 @@ const temporizador = document.querySelector("#tiempo")
 
                       }else{
                         document.getElementById("vida1").style.display = "none";
-                        vidaPlayer2=0
+                        //vidaPlayer2=0
                         decidirGanador()
                         yaPresiono = true;
                         }
