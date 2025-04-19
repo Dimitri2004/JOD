@@ -1,52 +1,23 @@
 
 
-#miObjeto {
+#Player1 {
     position: absolute;
     left: 40%;
-    top: 76.3%; /* Posición fija vertical */
+    bottom:0%; /* Posición fija vertical */
     width: 90px;
     height: 190px;
     background-color: aqua;
 
 }
-#bala1{
-    left: 40%;
-    top: 76.3%; /* Posición fija vertical */
-    width: 10px;
-    height: 10px;
-    background-color: rgb(255, 0, 21);
-}
-
-#miObjetivo {
-    position: absolute;
-   left: 40%;
-    top: 76.3%; /* Posición fija vertical */
-    width: 90px;
-    height: 190px;
-    background-color: aqua;
-
-}
-#bala2 {
-    
-   left: 40%;
-    top: 76.3%; /* Posición fija vertical */
-    width: 10px;
-    height: 10px;
-    background-color: rgb(255, 0, 0);
-
-}
-
 
 #contenedor{
     position: absolute; /* Posición relativa al viewport */
 
             width: 1500px; /* Ancho del contenedor */
             height: 520px; /* Altura del contenedor */
-            border: solid 5px;
-
-            width: 1800px; /* Ancho del contenedor */
-            height: 800px; /* Altura del contenedor */
             border: solid 1px;
+
+
 
             left: 50%; /* Posicionamiento horizontal */
             top: 50%;
