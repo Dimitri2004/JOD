@@ -16,7 +16,7 @@ function moverObjeto() {
         velocidadx1 *= +1; // Invertimos la dirección en el eje X
         // Aplicamos la nueva posición al estilo del objeto
         objeto.style.left = posicionx1 + "px";
-    } 
+    }
 }
 
 // Llamamos a la función `moverObjeto` repetidamente
@@ -114,35 +114,49 @@ function moverObjetivo() {
 setInterval(moverObjetivo, 20);
 
 
-const bala1 =document.getElementById("bala1");
 
+// localizamos el objeto que usaremos para mostrar el tiempo
+const temporizador = document.querySelector("#tiempo")
+    // Creamos una variable que llamara a la funcion 'bajarTiempo'
+    let intervaloB
+    // creamos la variable que marque el tiempo
+    let tiempoRestante = 3
 
-
-let posicionb1=440;
-let velocidadb1=addEventListener("click",20);
-
-function disparoBala1(){
-    const diana1=1200;
-
-    if (posicionb1<diana1){
-        posicionb1 +=velocidadb1;
-        velocidadb1*=-1;
-        bala1.style.left=posicionb1+"px";
+    encenderTemporizador();
+    //funcion que ira reduciendo el tiempo y actuara de temporizador
+    function bajarTiempo(){
+        temporizador.innerHTML = tiempoRestante
+        tiempoRestante--
+        if(tiempoRestante<0){
+            clearInterval(intervaloB)
+            temporizador.innerHTML = "YA"
+        }
     }
-}
-setInterval(disparoBala1,10);
 
-const bala2 =document.getElementById("bala2");
-
-let posicionb2=440;
-let velocidadb2=addEventListener("click",20);
-function disparoBala2(){
-    const diana2=1200;
-
-    if (posicionb2<diana2){
-        posicionb2 +=velocidadb2;
-        velocidadb2*=-1;
-        bala1.style.left=posicionb2+"px";
+    // Funcion para encender el temporizador con 3 segundos
+    function encenderTemporizador(){
+        tiempoRestante = 3;
+        intervaloB = setInterval(bajarTiempo,1000);
     }
-}
-setInterval(disparoBala2,10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
