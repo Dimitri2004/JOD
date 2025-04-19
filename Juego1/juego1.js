@@ -62,6 +62,18 @@ const temporizador = document.querySelector("#tiempo")
                       }
                     });
             }
+              function ocultarImagen() {
+                  const img = document.getElementById("vida1");
+                  const img2 = document.getElementById("vida2");
+                  const img3 = document.getElementById("vida3");
+                  const img4 = document.getElementById("vida4");
+                  const img5 = document.getElementById("vida5");
+                  const img6 = document.getElementById("vida6");
+                  img.style.opacity = "0";
+                  setInterval(() => {
+                    img.style.display = "none";
+                  }, 500); // espera a que se aplique la transición antes de quitarlo
+                }
     }
 
     // Funcion para encender el temporizador con 3 segundos
