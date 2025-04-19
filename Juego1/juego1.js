@@ -53,14 +53,15 @@ const temporizador = document.querySelector("#tiempo")
 
     document.addEventListener("keydown", (event) => {
       if (yaPresiono) return;
+      yaPresiono = true;
+
 
       if (event.key === "r" || event.key === "R") {
         if(tiempoRestante>0){
             quitarVidaInicioPlayer1()
         }else{
-         quitarVidaInicioPlayer2
+         quitarVidaInicioPlayer2()
          decidirGanador()
-         yaPresiono = true;
         }
 
       } else if (event.key === "l" || event.key === "L") {
@@ -68,9 +69,8 @@ const temporizador = document.querySelector("#tiempo")
             quitarVidaInicioPlayer2()
 
       }else{
-        quitarVidaInicioPlayer1
+        quitarVidaInicioPlayer1()
         decidirGanador()
-        yaPresiono = true;
         }
       }
     });
@@ -94,9 +94,7 @@ function decidirGanador(){
     else if(vidaPlayer2==0){
         victoria(1)
     }
-    else {
-        resetRonda()
-    }
+    
 }
 
 //funcion que declara la victoria
