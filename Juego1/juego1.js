@@ -61,7 +61,6 @@ const temporizador = document.querySelector("#tiempo")
             quitarVidaInicioPlayer1()
         }else{
          quitarVidaInicioPlayer2()
-         decidirGanador()
         }
 
       } else if (event.key === "l" || event.key === "L") {
@@ -70,9 +69,9 @@ const temporizador = document.querySelector("#tiempo")
 
       }else{
         quitarVidaInicioPlayer1()
-        decidirGanador()
         }
       }
+      decidirGanador()
     });
 
     // Funcion para encender el temporizador con 3 segundos
