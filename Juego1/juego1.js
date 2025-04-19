@@ -72,7 +72,11 @@ const temporizador = document.querySelector("#tiempo")
 
 //funcion que decide quien gana
 function decidirGanador(){
-    if (vidaPlayer1 == 0){
+
+    if (vidaPlayer1==vidaPlayer2 && vidaPlayer1==0){
+        victoria("empate")
+    }
+    else if (vidaPlayer1 == 0){
         victoria(1)
     }
     else if(vidaPlayer2==0){
@@ -82,6 +86,11 @@ function decidirGanador(){
 
 //funcion que declara la victoria
 function victoria(ganador){
-    alert("Gana el jugador "+ ganador)
+    if(ganador=="empate"){
+        alert("Empate inutiles")
+    }
+    else{
+        alert("Gana el jugador "+ ganador)
+    }
 }
 
