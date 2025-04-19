@@ -105,6 +105,7 @@ function victoria(ganador){
     }
     else{
         alert("Gana el jugador "+ ganador)
+        console.log("Gana el jugador "+ ganador)
     }
 }
 
@@ -113,9 +114,9 @@ function quitarVidaInicioPlayer1() {
     if (vidaPlayer1 >= 0) {
         vidaPlayer1--;
         document.getElementById("vida" + vidaPlayer1).style.display = "none";
+        resetRonda()
     }
     else{
-    console.log("No hay vidas restantes para el jugador 1");
     alert("No hay vidas restantes para el jugador 1");
     }
 }
@@ -124,9 +125,9 @@ function quitarVidaInicioPlayer2() {
     if (vidaPlayer2 >= 0) {
         vidaPlayer2--;
         document.getElementById("vidas" + vidaPlayer2).style.display = "none";
+        resetRonda()
     }
     else{
-    console.log("No hay vidas restantes para el jugador 2");
     alert("No hay vidas restantes para el jugador 2");
     }
 }
