@@ -9,6 +9,15 @@
     background-color: aqua;
 
 }
+#Player2 {
+    position: absolute;
+    left: 40%;
+    bottom:0%; /* Posición fija vertical */
+    width: 90px;
+    height: 190px;
+    background-color: aqua;
+
+}
 
 #contenedor{
     position: absolute; /* Posición relativa al viewport */

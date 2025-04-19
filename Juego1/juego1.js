@@ -1,7 +1,11 @@
 const objeto = document.getElementById("Player1");
-let posicionx1 = 450; // Posición inicial en el eje y
-let velocidadx1 = 3; // Velocidad en el eje X
+const objeto2 = document.getElementById("Player2");
+let posicionx1 = 450;
+ let posicionx2 = 550;
+let velocidadx1 = 3;
+ let velocidadx2 = -3;
 let distancia1=150;
+let distancia2=750;
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
@@ -10,6 +14,12 @@ function moverObjeto() {
         // Aplicamos la nueva posición al estilo del objeto
         objeto.style.left = posicionx1 + "px";
     }
+     if (posicionx2<distancia2) {
+            posicionx2 += velocidadx2;
+            velocidadx2 *= -1; // Invertimos la dirección en el eje X
+            // Aplicamos la nueva posición al estilo del objeto
+            objeto2.style.left = posicionx2 + "px";
+        }
 }
 
 // Llamamos a la función `moverObjeto` repetidamente
