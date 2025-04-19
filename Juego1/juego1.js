@@ -8,6 +8,7 @@ let distancia1=415;
 let distancia2=1015;
 let vidaPlayer1 = 3;
 let vidaPlayer2 = 3;
+
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
@@ -43,7 +44,6 @@ const temporizador = document.querySelector("#tiempo")
             clearInterval(intervaloB)
             temporizador.innerHTML = "YA"
         }
-            if (tiempoRestante<0){
                    let yaPresiono = false;
                     const resultado = document.getElementById("Press L");
                     const resultado2 = document.getElementById("Press R");
@@ -52,19 +52,27 @@ const temporizador = document.querySelector("#tiempo")
                       if (yaPresiono) return;
 
                       if (event.key === "r" || event.key === "R") {
-                        document.getElementById("vida4").style.display = "none";
-                        vidaPlayer1=0
-                        decidirGanador()
-                        yaPresiono = true;
+                        if(tiempoRestante>0){
+                            quitarVidaInicioPlayer1()
+                        }else{
+                         document.getElementById("vida4").style.display = "none";
+                         vidaPlayer1=0
+                         decidirGanador()
+                         yaPresiono = true;
+                        }
+
                       } else if (event.key === "l" || event.key === "L") {
+                        if(tiempoRestante>0){
+                            quitarVidaInicioPlayer2()
+
+                      }else{
                         document.getElementById("vida1").style.display = "none";
                         vidaPlayer2=0
                         decidirGanador()
                         yaPresiono = true;
+                        }
                       }
                     });
-            }
-
     }
 
     // Funcion para encender el temporizador con 3 segundos
@@ -94,6 +102,29 @@ function victoria(ganador){
     }
     else{
         alert("Gana el jugador "+ ganador)
+    }
+}
+
+//Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
+function quitarVidaInicioPlayer1() {
+    if (vidaPlayer1 >= 0) {
+        vidaPlayer1--;
+        document.getElementById("vida" + vidaPlayer1).style.display = "none";
+    }
+    else{
+    console.log("No hay vidas restantes para el jugador 1");
+    alert("No hay vidas restantes para el jugador 1");
+    }
+}
+//Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
+function quitarVidaInicioPlayer2() {
+    if (vidaPlayer2 >= 0) {
+        vidaPlayer2--;
+        document.getElementById("vidas" + vidaPlayer2).style.display = "none";
+    }
+    else{
+    console.log("No hay vidas restantes para el jugador 2");
+    alert("No hay vidas restantes para el jugador 2");
     }
 }
 
