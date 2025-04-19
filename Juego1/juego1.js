@@ -93,6 +93,9 @@ function decidirGanador(){
     else if(vidaPlayer2==0){
         victoria(2)
     }
+    else {
+        resetRonda()
+    }
 }
 
 //funcion que declara la victoria
@@ -126,5 +129,17 @@ function quitarVidaInicioPlayer2() {
     console.log("No hay vidas restantes para el jugador 2");
     alert("No hay vidas restantes para el jugador 2");
     }
+}
+
+//funcion para resetear ronda
+function resetRonda(){
+    posicionx1=715
+    posicionx2=715
+    
+    objeto.style.left = posicionx1 + "px";
+    objeto2.style.left = posicionx2 + "px";
+
+    temporizador.innerHTML=""
+    encenderTemporizador()
 }
 
