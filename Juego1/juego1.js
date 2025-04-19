@@ -52,10 +52,12 @@ const temporizador = document.querySelector("#tiempo")
                       if (yaPresiono) return;
 
                       if (event.key === "r" || event.key === "R") {
-                        resultado2.textContent = "¡Jugador 1 fue el más rápido! 🚀";
+                        vidaPlayer1=0
+                        decidirGanador()
                         yaPresiono = true;
                       } else if (event.key === "l" || event.key === "L") {
-                        resultado.textContent = "¡Jugador 2 fue el más rápido! ⚡";
+                        vidaPlayer2=0
+                        decidirGanador()
                         yaPresiono = true;
                       }
                     });
@@ -70,10 +72,10 @@ const temporizador = document.querySelector("#tiempo")
 
 //funcion que decide quien gana
 function decidirGanador(){
-    if (vidasJugador1 == 0){
+    if (vidaPlayer1 == 0){
         victoria(1)
     }
-    else if(vidasJugador2==0){
+    else if(vidaPlayer2==0){
         victoria(2)
     }
 }
