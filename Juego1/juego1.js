@@ -22,8 +22,6 @@ function moverObjeto() {
 // Llamamos a la función `moverObjeto` repetidamente
 setInterval(moverObjeto, 20);
 
-
-
 const objetivo = document.getElementById("miObjetivo");
 const contenedor2 = document.getElementById("contenedor");
 

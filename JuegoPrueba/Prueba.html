@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Quién pulsó primero?</title>
+</head>
+<body>
+
+<h2>Pulsa la tecla <strong>A</strong> o <strong>L</strong> lo más rápido posible</h2>
+<p id="resultado">Esperando pulsación...</p>
+<button id="reiniciar">Volver a jugar</button>
+
+<script>
+    let yaPresiono = false;
+    const resultado = document.getElementById("resultado");
+    const botonReiniciar = document.getElementById("reiniciar");
+
+    document.addEventListener("keydown", (event) => {
+      if (yaPresiono) return;
+
+      if (event.key === "a" || event.key === "A") {
+        resultado.textContent = "¡Jugador 1 (A) fue el más rápido! 🚀";
+        yaPresiono = true;
+      } else if (event.key === "l" || event.key === "L") {
+        resultado.textContent = "¡Jugador 2 (L) fue el más rápido! ⚡";
+        yaPresiono = true;
+      }
+    });
+
+    botonReiniciar.addEventListener("click", () => {
+      resultado.textContent = "Esperando pulsación...";
+      yaPresiono = false;
+    });
+</script>
+
+</body>
+</html>
+
