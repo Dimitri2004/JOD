@@ -1,6 +1,6 @@
 const objeto = document.getElementById("Player1");
 let posicionx1 = 450; // Posición inicial en el eje y
-let velocidadx1 = 0.5; // Velocidad en el eje X
+let velocidadx1 = 3; // Velocidad en el eje X
 let distancia1=150;
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
@@ -13,7 +13,7 @@ function moverObjeto() {
 }
 
 // Llamamos a la función `moverObjeto` repetidamente
-setInterval(moverObjeto, 20);
+setInterval(moverObjeto, 40);
 
 // localizamos el objeto que usaremos para mostrar el tiempo
 const temporizador = document.querySelector("#tiempo")
