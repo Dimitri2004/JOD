@@ -1,11 +1,11 @@
 const objeto = document.getElementById("Player1");
 const objeto2 = document.getElementById("Player2");
-let posicionx1 = 450;
- let posicionx2 =450;
+let posicionx1 = 715;
+ let posicionx2 =715;
 let velocidadx1 = 3;
- let velocidadx2 =5;
-let distancia1=150;
-let distancia2=950;
+ let velocidadx2 =3;
+let distancia1=415;
+let distancia2=1015;
 let vidaPlayer1 = 3;
 let vidaPlayer2 = 3;
 function moverObjeto() {
