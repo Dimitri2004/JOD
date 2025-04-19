@@ -35,8 +35,8 @@
             background-color: beige;
 
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: space-between; /* Ajusta el espacio entre los elementos */
+            align-items: center; /* Asegura que estén a la misma altura */
 }
 
 
@@ -54,3 +54,8 @@
     text-align: center;
 }
 
+.vidaPlayer1, .vidaPlayer2 {
+    display: flex;
+    gap: 10px; /* Espaciado entre las imágenes */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
