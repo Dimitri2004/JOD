@@ -44,36 +44,38 @@ const temporizador = document.querySelector("#tiempo")
             clearInterval(intervaloB)
             temporizador.innerHTML = "YA"
         }
-                   let yaPresiono = false;
-                    const resultado = document.getElementById("Press L");
-                    const resultado2 = document.getElementById("Press R");
-
-                    document.addEventListener("keydown", (event) => {
-                      if (yaPresiono) return;
-
-                      if (event.key === "r" || event.key === "R") {
-                        if(tiempoRestante>0){
-                            quitarVidaInicioPlayer1()
-                        }else{
-                         document.getElementById("vida4").style.display = "none";
-                         //vidaPlayer1=0
-                         decidirGanador()
-                         yaPresiono = true;
-                        }
-
-                      } else if (event.key === "l" || event.key === "L") {
-                        if(tiempoRestante>0){
-                            quitarVidaInicioPlayer2()
-
-                      }else{
-                        document.getElementById("vida1").style.display = "none";
-                        //vidaPlayer2=0
-                        decidirGanador()
-                        yaPresiono = true;
-                        }
-                      }
-                    });
     }
+
+    // mecanismo para que detecte las pulsaciones
+    let yaPresiono = false;
+    const resultado = document.getElementById("Press L");
+    const resultado2 = document.getElementById("Press R");
+
+    document.addEventListener("keydown", (event) => {
+      if (yaPresiono) return;
+
+      if (event.key === "r" || event.key === "R") {
+        if(tiempoRestante>0){
+            quitarVidaInicioPlayer1()
+        }else{
+         document.getElementById("vida4").style.display = "none";
+         //vidaPlayer1=0
+         decidirGanador()
+         yaPresiono = true;
+        }
+
+      } else if (event.key === "l" || event.key === "L") {
+        if(tiempoRestante>0){
+            quitarVidaInicioPlayer2()
+
+      }else{
+        document.getElementById("vida1").style.display = "none";
+        //vidaPlayer2=0
+        decidirGanador()
+        yaPresiono = true;
+        }
+      }
+    });
 
     // Funcion para encender el temporizador con 3 segundos
     function encenderTemporizador(){
