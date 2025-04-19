@@ -6,6 +6,8 @@ let velocidadx1 = 3;
  let velocidadx2 =5;
 let distancia1=150;
 let distancia2=950;
+let vidaPlayer1 = 3;
+let vidaPlayer2 = 3;
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
@@ -41,7 +43,25 @@ const temporizador = document.querySelector("#tiempo")
             clearInterval(intervaloB)
             temporizador.innerHTML = "YA"
         }
+            if (tiempoRestante<0){
+                   let yaPresiono = false;
+                    const resultado = document.getElementById("Press L");
+                    const resultado2 = document.getElementById("Press R");
+
+                    document.addEventListener("keydown", (event) => {
+                      if (yaPresiono) return;
+
+                      if (event.key === "r" || event.key === "R") {
+                        resultado2.textContent = "¡Jugador 1 fue el más rápido! 🚀";
+                        yaPresiono = true;
+                      } else if (event.key === "l" || event.key === "L") {
+                        resultado.textContent = "¡Jugador 2 fue el más rápido! ⚡";
+                        yaPresiono = true;
+                      }
+                    });
+            }
     }
+
     // Funcion para encender el temporizador con 3 segundos
     function encenderTemporizador(){
         tiempoRestante = 3;
@@ -62,3 +82,4 @@ function decidirGanador(){
 function victoria(ganador){
     alert("Gana el jugador "+ ganador)
 }
+
