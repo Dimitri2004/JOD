@@ -79,6 +79,7 @@ const temporizador = document.querySelector("#tiempo")
 
     // Funcion para encender el temporizador con 3 segundos
     function encenderTemporizador(){
+        clearInterval(intervaloB)
         tiempoRestante = 3;
         intervaloB = setInterval(bajarTiempo,1000);
     }
