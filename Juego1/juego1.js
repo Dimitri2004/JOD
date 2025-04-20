@@ -38,9 +38,9 @@ const temporizador = document.querySelector("#tiempo")
     encenderTemporizador();
     //funcion que ira reduciendo el tiempo y actuara de temporizador
     function bajarTiempo(){
-        temporizador.innerHTML = tiempoRestante
         tiempoRestante--
-        if(tiempoRestante<0){
+        temporizador.innerHTML = tiempoRestante
+        if(tiempoRestante<=0){
             clearInterval(intervaloB)
             temporizador.innerHTML = "YA"
         }
@@ -78,6 +78,7 @@ const temporizador = document.querySelector("#tiempo")
     function encenderTemporizador(){
         clearInterval(intervaloB)
         tiempoRestante = 3;
+        temporizador.innerHTML = tiempoRestante
         intervaloB = setInterval(bajarTiempo,1000);
     }
 
