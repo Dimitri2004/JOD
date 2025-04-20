@@ -77,7 +77,7 @@ const temporizador = document.querySelector("#tiempo")
     // Funcion para encender el temporizador con 3 segundos
     function encenderTemporizador(){
         clearInterval(intervaloB)
-        tiempoRestante = 3;
+        tiempoRestante = 4;
         temporizador.innerHTML = tiempoRestante
         intervaloB = setInterval(bajarTiempo,1000);
     }
@@ -107,6 +107,7 @@ function victoria(ganador){
         alert("Gana el jugador "+ ganador)
         console.log("Gana el jugador "+ ganador)
     }
+    resetRonda()
 }
 function GameOver(){
 if (vidaPlayer1<=0 || vidaPlayer2<=0){
