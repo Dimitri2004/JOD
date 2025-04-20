@@ -89,10 +89,14 @@ function decidirGanador(){
     if (vidaPlayer1==vidaPlayer2 && vidaPlayer1==0){
         victoria("empate")
     }
-    else if (vidaPlayer1 == 0){
+    else if (vidaPlayer1 <= 0){
+    gameOver=true;
+
         victoria(2)
     }
-    else if(vidaPlayer2 == 0){
+    else if(vidaPlayer2 <= 0){
+    gameOver=true;
+
         victoria(1)
     }
     
@@ -107,12 +111,6 @@ function victoria(ganador){
         alert("Gana el jugador "+ ganador)
         console.log("Gana el jugador "+ ganador)
     }
-}
-function GameOver(){
-if (vidaPlayer1<=0 || vidaPlayer2<=0){
-gameOver=true;
-
-}
 }
 
 //Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
@@ -149,5 +147,13 @@ function resetRonda(){
 
     temporizador.innerHTML=""
     encenderTemporizador()
+}
+function resetPartida(){
+    posicionx1=715
+    posicionx2=715
+
+    objeto.style.left = posicionx1 + "px";
+    objeto2.style.left = posicionx2 + "px";
+
 }
 
