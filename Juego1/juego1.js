@@ -102,18 +102,22 @@ function decidirGanador(){
 function victoria(ganador){
     if(ganador=="empate"){
         alert("Empate inutiles")
+        GameOver()
     }
     else{
         alert("Gana el jugador "+ ganador)
         console.log("Gana el jugador "+ ganador)
+        GameOver()
     }
     resetRonda()
 }
 function GameOver(){
-if (vidaPlayer1<=0 || vidaPlayer2<=0){
-gameOver=true;
-
-}
+    gameOver=true
+    alert("Fin del juego,Reiniciando...")
+    // Reiniciar pagina
+    setTimeout(function() {
+        location.reload();
+    }, 10); // Espera 2 segundos antes de recargar la página
 }
 
 //Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
