@@ -1,0 +1,63 @@
+#game-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+#game-over-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+#game-over-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+#game-over-content {
+  color: white;
+  text-align: center;
+  background: #222;
+  padding: 40px;
+  border-radius: 20px;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+#game-over-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#game-over-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #ff3c3c;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#game-over-content button:hover {
+  background: #e60000;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

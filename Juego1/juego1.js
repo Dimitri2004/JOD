@@ -8,6 +8,7 @@ let distancia1=415;
 let distancia2=1015;
 let vidaPlayer1 = 3;
 let vidaPlayer2 = 3;
+let gameOver=false;
 
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
@@ -66,7 +67,6 @@ const temporizador = document.querySelector("#tiempo")
       } else if (event.key === "l" || event.key === "L") {
         if(tiempoRestante>0){
             quitarVidaInicioPlayer2()
-
       }else{
         quitarVidaInicioPlayer1()
         }
@@ -80,6 +80,7 @@ const temporizador = document.querySelector("#tiempo")
         tiempoRestante = 3;
         intervaloB = setInterval(bajarTiempo,1000);
     }
+    
 
 //funcion que decide quien gana
 function decidirGanador(){
@@ -90,7 +91,7 @@ function decidirGanador(){
     else if (vidaPlayer1 == 0){
         victoria(2)
     }
-    else if(vidaPlayer2==0){
+    else if(vidaPlayer2 == 0){
         victoria(1)
     }
     
@@ -105,6 +106,12 @@ function victoria(ganador){
         alert("Gana el jugador "+ ganador)
         console.log("Gana el jugador "+ ganador)
     }
+}
+function GameOver(){
+if (vidaPlayer1<=0 || vidaPlayer2<=0){
+gameOver=true;
+
+}
 }
 
 //Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
