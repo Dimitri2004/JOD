@@ -107,6 +107,7 @@ function victoria(ganador){
         alert("Gana el jugador "+ ganador)
         console.log("Gana el jugador "+ ganador)
     }
+    resetRonda()
 }
 function GameOver(){
 if (vidaPlayer1<=0 || vidaPlayer2<=0){
