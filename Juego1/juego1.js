@@ -57,28 +57,31 @@ const temporizador = document.querySelector("#tiempo")
     const resultado2 = document.getElementById("Press R");
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "t" || event.key === "T") {
-        musicaFondo.play()  
-      }
-      if (yaPresiono) return;
-      
+        if (tiempoRestante==4){}
+        else{
+          if (event.key === "t" || event.key === "T") {
+            musicaFondo.play()
+          }
+          if (yaPresiono) return;
 
 
-      if (event.key === "r" || event.key === "R") {
-        if(tiempoRestante>0){
+
+          if (event.key === "r" || event.key === "R") {
+            if(tiempoRestante>0){
+                quitarVidaInicioPlayer1()
+            }else{
+             quitarVidaInicioPlayer2()
+            }
+
+          } else if (event.key === "l" || event.key === "L") {
+            if(tiempoRestante>0){
+                quitarVidaInicioPlayer2()
+          }else{
             quitarVidaInicioPlayer1()
-        }else{
-         quitarVidaInicioPlayer2()
+            }
+          }
+          decidirGanador()
         }
-
-      } else if (event.key === "l" || event.key === "L") {
-        if(tiempoRestante>0){
-            quitarVidaInicioPlayer2()
-      }else{
-        quitarVidaInicioPlayer1()
-        }
-      }
-      decidirGanador()
     });
 
     // Funcion para encender el temporizador con 3 segundos
