@@ -9,8 +9,11 @@ let distancia2=1015;
 let vidaPlayer1 = 3;
 let vidaPlayer2 = 3;
 let gameOver=false;
+let musicaFondo = document.querySelector("#musica")
+
 
 function moverObjeto() {
+    musicaFondo.play()
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
         posicionx1 -= velocidadx1;
