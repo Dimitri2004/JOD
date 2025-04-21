@@ -9,7 +9,7 @@
 display: flex;
       justify-content: center; /* Centrado horizontalmente */
       align-items: flex-start;
-      font-size: 80px; /* Tamaño de la fuente */
+      font-size: 60px; /* Tamaño de la fuente */
   font-family: 'MiFuentePersonalizada', sans-serif; /* Aplica la fuente */
 }
 
@@ -60,7 +60,7 @@ font-size:70px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: 'MiFuentePersonalizada', sans-serif;
+
 }
 
 
@@ -81,7 +81,7 @@ font-size:70px;
 
 #T{
     position: absolute;
-    font-size:50px;
+    font-size:40px;
     right: 4%;
     top: 4%;
 }
