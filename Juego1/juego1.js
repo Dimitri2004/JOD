@@ -117,7 +117,7 @@ function GameOver(){
     // Reiniciar pagina
     setTimeout(function() {
         location.reload();
-    }, 10); // Espera 2 segundos antes de recargar la página
+    }, 5); // Espera 2 segundos antes de recargar la página
 }
 
 //Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
@@ -136,7 +136,9 @@ function quitarVidaInicioPlayer2() {
     if (vidaPlayer2 >= 0) {
         document.getElementById("vidas" + vidaPlayer2).style.display = "none";
         vidaPlayer2--;
+
         resetRonda()
+
     }
     else{
     alert("No hay vidas restantes para el jugador 2");
