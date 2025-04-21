@@ -9,18 +9,21 @@ align-items: center;
     position: absolute;
     left: 40%;
     bottom:0%; /* Posición fija vertical */
-    width: 90px;
-    height: 190px;
-    background-color: aqua;
+    width: 210px;
+    height: 217px;
+    baground-size: contain;
+    transform:scaleX(-1);
+    background-image: url('vaquero_transparente.png');
 
 }
 #Player2 {
     position: absolute;
     left: 40%;
     bottom:0%; /* Posición fija vertical */
-    width: 90px;
-    height: 190px;
-    background-color: aqua;
+    width: 210px;
+    height: 217px;
+    baground-size: cover;
+    background-image: url('vaquero_transparente.png');
 
 }
 
