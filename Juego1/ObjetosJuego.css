@@ -9,10 +9,16 @@
 display: flex;
       justify-content: center; /* Centrado horizontalmente */
       align-items: flex-start;
-      font-size: 90px; /* Tamaño de la fuente */
+      font-size: 80px; /* Tamaño de la fuente */
   font-family: 'MiFuentePersonalizada', sans-serif; /* Aplica la fuente */
 }
+#T{
+font-size:30px;
 
+}
+#tiempo{
+font-size:70px;
+}
 
 
 #Player1 {
