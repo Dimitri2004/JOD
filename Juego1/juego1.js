@@ -12,6 +12,8 @@ let gameOver=false;
 let musicaFondo = document.querySelector("#musica")
 
 
+let disparo = document.querySelector("#disparo")
+
 function moverObjeto() {
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
@@ -118,6 +120,8 @@ function GameOver(){
 
 //Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
 function quitarVidaInicioPlayer1() {
+    disparo.currentTime = 0
+    disparo.play()
     if (vidaPlayer1 >= 0) {
         document.getElementById("vida" + vidaPlayer1).style.display = "none";
         vidaPlayer1--;
@@ -129,6 +133,8 @@ function quitarVidaInicioPlayer1() {
 }
 //Función que quita una vida y elimina un corazon si se presiona R o L antes de que finalice el contador
 function quitarVidaInicioPlayer2() {
+    disparo.currentTime = 0
+    disparo.play()
     if (vidaPlayer2 >= 0) {
         document.getElementById("vidas" + vidaPlayer2).style.display = "none";
         vidaPlayer2--;
@@ -153,4 +159,5 @@ function resetRonda(){
     temporizador.innerHTML=""
     encenderTemporizador()
 }
+
 
