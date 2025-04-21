@@ -13,7 +13,6 @@ let musicaFondo = document.querySelector("#musica")
 
 
 function moverObjeto() {
-    musicaFondo.play()
     // Detectamos colisiones con los bordes horizontales
     if (posicionx1>distancia1) {
         posicionx1 -= velocidadx1;
@@ -56,8 +55,11 @@ const temporizador = document.querySelector("#tiempo")
     const resultado2 = document.getElementById("Press R");
 
     document.addEventListener("keydown", (event) => {
+      if (event.key === "t" || event.key === "T") {
+        musicaFondo.play()  
+      }
       if (yaPresiono) return;
-      yaPresiono = true;
+      
 
 
       if (event.key === "r" || event.key === "R") {
