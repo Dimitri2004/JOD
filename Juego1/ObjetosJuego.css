@@ -9,12 +9,16 @@
     background-color: aqua;
 
 }
-#bala1{
-    left: 40%;
-    top: 76.3%; /* Posición fija vertical */
-    width: 10px;
-    height: 10px;
-    background-color: rgb(255, 0, 21);
+#p1{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+}
+#p2{
+    align-content: center;
+    background-color: red;
+    width: 20px;
+    height: 20px;
 }
 
 #miObjetivo {
@@ -26,15 +30,7 @@
     background-color: aqua;
 
 }
-#bala2 {
-    
-   left: 40%;
-    top: 76.3%; /* Posición fija vertical */
-    width: 10px;
-    height: 10px;
-    background-color: rgb(255, 0, 0);
 
-}
 
 
 #contenedor{
